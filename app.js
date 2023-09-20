@@ -11,6 +11,10 @@ app.use(cors())
 // middlers - irá permitir comunicação de dados via Json
 app.use(express.json())
 
+// DB Connection
+const conn = require("./db/conn")
+conn();
+
 app.listen(4000, function(){
     console.log("Servidor está online na porta 4000!")
 })
