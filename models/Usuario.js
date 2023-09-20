@@ -12,16 +12,16 @@ const usuarioSchema = new Schema({
         required: true
     },
     password: {
-        type: Number,
+        type: String,
         required: true
     },
     end_entrega: {
         type: String,
-        required: true
+        required: false
     },
     notificacao: {
         type: Boolean,
-        required: true,
+        required: false,
         default: true
     },
 }, { timestamps: true }
