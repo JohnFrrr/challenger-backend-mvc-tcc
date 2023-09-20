@@ -39,7 +39,7 @@ const produtoController = {
             const produto = await ProdutoModel.findById(id)
             
             if (!produto){
-                res.json(404).json({ msg: "Produto não encontrado."})
+                res.status(404).json({ msg: "Produto não encontrado."})
                 return;
             }
 
@@ -55,7 +55,7 @@ const produtoController = {
             const produto = await ProdutoModel.findById(id)
             
             if (!produto){
-                res.json(404).json({ msg: "Produto não encontrado."})
+                res.status(404).json({ msg: "Produto não encontrado."})
                 return;
             }
 
@@ -83,7 +83,7 @@ const produtoController = {
             const updateProduto = await ProdutoModel.findByIdAndUpdate(id, produto)
             
             if (!updateProduto){
-                res.json(404).json({ msg: "Produto não encontrado."})
+                res.status(404).json({ msg: "Produto não encontrado."})
                 return;
             }
 
