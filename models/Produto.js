@@ -29,7 +29,7 @@ const produtoSchema = new Schema({
         required: true
     },
     qtd: {
-        type: String,
+        type: Number,
         required: true
     },
 }, { timestamps: true }
