@@ -47,10 +47,9 @@ const usuarioController = {
     },
     get: async (req, res) => {
         try {
-            const id = req.params.id
-            console.log(id)
+            const email = req.params.id
 
-            const usuario = await UsuarioModel.findOne({ email: id }).exec();
+            const usuario = await UsuarioModel.findOne({ email: email }).exec();
 
             if (!usuario) {
                 res.status(404).json({ msg: "email de usuário não encontrado." })
