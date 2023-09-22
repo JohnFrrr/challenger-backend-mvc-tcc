@@ -15,6 +15,10 @@ router
     .get((req, res) => pedidoController.get(req, res));
 
 router  
+    .route("/pedidos/:email")
+    .get((req, res) => pedidoController.get(req, res));
+
+router  
     .route("/pedidos/:id")
     .delete((req, res) => pedidoController.delete(req, res));
 

@@ -45,6 +45,23 @@ const pedidoController = {
             console.log(error);
         }
     },
+    get: async (req, res) => {
+        try {
+            const email = req.params.id
+
+            const pedido = await PedidoModel.find({ email: email }).exec();
+
+            if (!pedido) {
+                res.status(404).json({ msg: "Pedido não encontrado." })
+                return;
+            }
+
+            res.json(pedido)
+
+        } catch (error) {
+            console.log(error);
+        }
+    },
     delete: async (req, res) => {
         try {
             const id = req.params.id

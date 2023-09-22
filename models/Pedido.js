@@ -16,11 +16,11 @@ const pedidoSchema = new Schema ({
     },
     user: {
         type: String,
-        required: false
+        required: true
     },
     email: {
         type: String,
-        required: false
+        required: true
     },
     end_entrega: {
         type: String,

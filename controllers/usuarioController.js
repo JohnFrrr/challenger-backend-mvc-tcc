@@ -49,7 +49,7 @@ const usuarioController = {
         try {
             const email = req.params.id
 
-            const usuario = await UsuarioModel.findOne({ email: email }).exec();
+            const usuario = await UsuarioModel.find({ email: email }).exec();
 
             if (!usuario) {
                 res.status(404).json({ msg: "email de usuário não encontrado." })
