@@ -15,6 +15,10 @@ router
     .get((req, res) => usuarioController.get(req, res));
 
 router  
+    .route("/usuarios/:email")
+    .get((req, res) => usuarioController.get(req, res));
+
+router  
     .route("/usuarios/:id")
     .delete((req, res) => usuarioController.delete(req, res));
 

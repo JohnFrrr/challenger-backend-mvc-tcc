@@ -45,6 +45,23 @@ const usuarioController = {
             console.log(error);
         }
     },
+    get: async (req, res) => {
+        try {
+            const id = req.params.id
+            console.log(id)
+
+            const usuario = await UsuarioModel.findOne({ email: id }).exec();
+
+            if (!usuario) {
+                res.status(404).json({ msg: "email de usuário não encontrado." })
+                return;
+            }
+
+            res.json(usuario)
+        } catch (error) {
+            console.log(error);
+        }
+    },
     delete: async (req, res) => {
         try {
             const id = req.params.id
