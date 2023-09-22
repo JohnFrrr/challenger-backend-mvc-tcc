@@ -56,7 +56,7 @@ const usuarioController = {
                 return;
             }
 
-            res.json(usuario)
+            res.json(usuario[0])
         } catch (error) {
             console.log(error);
         }
