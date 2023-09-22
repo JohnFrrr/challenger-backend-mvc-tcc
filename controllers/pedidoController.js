@@ -6,7 +6,9 @@ const pedidoController = {
             const pedido = {
                 data: req.body.data,
                 produtos: req.body.produtos,
-                usuarios: req.body.usuarios,
+                user: req.body.user,
+                email: req.body.email,
+                end_entrega: req.body.end_entrega,
             }
 
             const response = await PedidoModel.create(pedido)
@@ -68,7 +70,9 @@ const pedidoController = {
             const pedido = {
                 data: req.body.data,
                 produtos: req.body.produtos,
-                usuarios: req.body.usuarios,
+                user: req.body.user,
+                email: req.body.email,
+                end_entrega: req.body.end_entrega,
             }
 
             const updatedPedido = await PedidoModel.findByIdAndUpdate(id, pedido)
